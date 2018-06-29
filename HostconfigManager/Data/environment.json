@@ -1,0 +1,10 @@
+﻿[
+  {
+    "hostname": "localhost",
+    "ipAddress": "127.0.0.1"
+  },
+  {
+    "hostname": "rafael-dev",
+    "ipAddress": "127.0.0.1"
+  }
+]
