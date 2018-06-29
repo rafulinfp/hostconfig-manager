@@ -32,9 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.wToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,47 +42,41 @@
             this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItemSeparator});
             this.contextMenuStrip.Name = "contextMenuStrip1";
-            this.contextMenuStrip.Size = new System.Drawing.Size(174, 46);
+            this.contextMenuStrip.Size = new System.Drawing.Size(116, 32);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Enabled = false;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(173, 36);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.settingsToolStripMenuItem.Text = "settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
+            // toolStripMenuItemSeparator
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(170, 6);
+            this.toolStripMenuItemSeparator.Name = "toolStripMenuItemSeparator";
+            this.toolStripMenuItemSeparator.Size = new System.Drawing.Size(112, 6);
             // 
             // notifyIcon
             // 
             this.notifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon.BalloonTipText = "Pending";
-            this.notifyIcon.BalloonTipTitle = "CurrentEnvironment";
+            this.notifyIcon.BalloonTipText = "<TBD>";
+            this.notifyIcon.BalloonTipTitle = "Environment NOT set";
             this.notifyIcon.ContextMenuStrip = this.contextMenuStrip;
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "notifyIcon";
+            this.notifyIcon.Text = "Host Config Manager";
             this.notifyIcon.Visible = true;
-            // 
-            // wToolStripMenuItem
-            // 
-            this.wToolStripMenuItem.Checked = true;
-            this.wToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.wToolStripMenuItem.Name = "wToolStripMenuItem";
-            this.wToolStripMenuItem.Size = new System.Drawing.Size(300, 38);
-            this.wToolStripMenuItem.Text = "w";
+            this.notifyIcon.DoubleClick += new System.EventHandler(this.notifyIcon_DoubleClick);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(400, 234);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.ShowInTaskbar = false;
             this.Text = "Main";
@@ -100,9 +93,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem wToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItemSeparator;
     }
 }
 

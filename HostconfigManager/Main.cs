@@ -1,13 +1,7 @@
-﻿using HostconfigManager.Services;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using HostconfigManager.Services;
 
 namespace HostconfigManager
 {
@@ -25,9 +19,7 @@ namespace HostconfigManager
         {
             Hide();
             notifyIcon.Visible = true;
-            notifyIcon.BalloonTipTitle = "Current environmnet";
-            notifyIcon.BalloonTipText = "this is the text";
-            notifyIcon.BalloonTipIcon = ToolTipIcon.Info;
+
 
             _hidden = true;
 
@@ -60,7 +52,17 @@ namespace HostconfigManager
             if (result)
             {
                 (sender as ToolStripMenuItem).Font = new Font((sender as ToolStripMenuItem).Font, FontStyle.Bold);
-
+                notifyIcon.BalloonTipTitle = $"Active Environment: {environment.CurrentEnvironment.Hostname}";
+                notifyIcon.BalloonTipText = $"{environment.CurrentEnvironment.IpAddress}";
+                notifyIcon.BalloonTipIcon = ToolTipIcon.Info;
+                notifyIcon.ShowBalloonTip(3000);
+            }
+            else
+            {
+                notifyIcon.BalloonTipTitle = $"Error";
+                notifyIcon.BalloonTipText = $"Could not set environment configuration for: {targetEnv}";
+                notifyIcon.BalloonTipIcon = ToolTipIcon.Error;
+                notifyIcon.ShowBalloonTip(3000);
             }
         }
 
@@ -92,6 +94,11 @@ namespace HostconfigManager
         {
             e.Cancel = true;
             ToggleMain();
+        }
+
+        private void notifyIcon_DoubleClick(object sender, EventArgs e)
+        {
+            notifyIcon.ShowBalloonTip(3000);
         }
     }
 }

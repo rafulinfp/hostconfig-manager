@@ -1,9 +1,5 @@
-﻿using HostconfigManager.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using HostconfigManager.Models;
 
 namespace HostconfigManager.Services
 {
@@ -12,5 +8,6 @@ namespace HostconfigManager.Services
         IEnumerable<Domain> LoadDomain();
         IEnumerable<TargetEnvironment> LoadEnvironment();
         bool SetEnvironment(string hostname);
+        string LoadDefault();
     }
 }

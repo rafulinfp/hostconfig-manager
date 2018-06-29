@@ -10,5 +10,47 @@
   },
   {
     "domainName": "registration.backup.net"
+  },
+  {
+    "domainName": "registration.backup.net"
+  },
+  {
+    "domainName": "login.backup.net"
+  },
+  {
+    "domainName": "qastage.backup.net"
+  },
+  {
+    "domainName": "demo.backup.net"
+  },
+  {
+    "domainName": "api.backup.net"
+  },
+  {
+    "domainName": "stage.backup.net"
+  },
+  {
+    "domainName": "nevada.backup.net"
+  },
+  {
+    "domainName": "kub-rabbitmq"
+  },
+  {
+    "domainName": "tenant"
+  },
+  {
+    "domainName": "apidoc.backup.net"
+  },
+  {
+    "domainName": "apidoc-login.backup.net"
+  },
+  {
+    "domainName": "apidoc-registration.backup.net"
+  },
+  {
+    "domainName": "apidoc-tenant.backup.net"
+  },
+  {
+    "domainName": "apidoc-backend.backup.net"
   }
 ]
