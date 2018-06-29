@@ -1,3 +1,14 @@
 ﻿[
-  "backup.net"
+  {
+    "domainName": "backup.net"
+  },
+  {
+    "domainName": "system.backup.net"
+  },
+  {
+    "domainName": "tenant.backup.net"
+  },
+  {
+    "domainName": "registration.backup.net"
+  }
 ]
