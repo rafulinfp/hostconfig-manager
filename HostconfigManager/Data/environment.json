@@ -2,21 +2,5 @@
   {
     "hostname": "default",
     "ipAddress": "127.0.0.1"
-  },
-  {
-    "hostname": "rafael-dev",
-    "ipAddress": "10.130.0.179"
-  },
-  {
-    "hostname": "przemek-dev",
-    "ipAddress": "10.130.0.1"
-  },
-  {
-    "hostname": "integration-dev",
-    "ipAddress": "10.130.0.152"
-  },
-  {
-    "hostname": "stage-qa",
-    "ipAddress": "10.130.0.100"
   }
 ]
