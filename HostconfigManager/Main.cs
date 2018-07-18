@@ -9,6 +9,7 @@ namespace HostconfigManager
     {
         private bool _hidden = false;
         private EnvironmentConfig environment;
+        private bool _enforceClosing = false;
 
         public Main()
         {
@@ -75,16 +76,16 @@ namespace HostconfigManager
         {
             if (_hidden)
             {
-                this.ShowInTaskbar = true;
-                this.WindowState = FormWindowState.Maximized;
-                this.Show();
+                ShowInTaskbar = true;
+                WindowState = FormWindowState.Maximized;
+                Show();
                 _hidden = false;
             }
             else
             {
-                this.ShowInTaskbar = false;
-                this.WindowState = FormWindowState.Minimized;
-                this.Hide();
+                ShowInTaskbar = false;
+                WindowState = FormWindowState.Minimized;
+                Hide();
                 _hidden = true;
             }
 
@@ -92,13 +93,22 @@ namespace HostconfigManager
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            ToggleMain();
+            if (!_enforceClosing)
+            {
+                e.Cancel = true;
+                ToggleMain();
+            }
         }
 
         private void notifyIcon_DoubleClick(object sender, EventArgs e)
         {
             notifyIcon.ShowBalloonTip(3000);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _enforceClosing = true;
+            Application.Exit();
         }
     }
 }

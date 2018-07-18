@@ -34,6 +34,7 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,23 +42,24 @@
             // 
             this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem,
             this.settingsToolStripMenuItem,
             this.toolStripMenuItemSeparator});
             this.contextMenuStrip.Name = "contextMenuStrip1";
-            this.contextMenuStrip.Size = new System.Drawing.Size(116, 32);
+            this.contextMenuStrip.Size = new System.Drawing.Size(181, 76);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Enabled = false;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.settingsToolStripMenuItem.Text = "settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // toolStripMenuItemSeparator
             // 
             this.toolStripMenuItemSeparator.Name = "toolStripMenuItemSeparator";
-            this.toolStripMenuItemSeparator.Size = new System.Drawing.Size(112, 6);
+            this.toolStripMenuItemSeparator.Size = new System.Drawing.Size(177, 6);
             // 
             // notifyIcon
             // 
@@ -69,6 +71,14 @@
             this.notifyIcon.Text = "Host Config Manager";
             this.notifyIcon.Visible = true;
             this.notifyIcon.DoubleClick += new System.EventHandler(this.notifyIcon_DoubleClick);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Text = "exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -94,6 +104,7 @@
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItemSeparator;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
