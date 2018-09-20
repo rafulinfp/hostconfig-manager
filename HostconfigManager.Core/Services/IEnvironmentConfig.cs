@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using HostconfigManager.Models;
+using HostconfigManager.Core.Models;
 
 namespace HostconfigManager.Core.Services
 {

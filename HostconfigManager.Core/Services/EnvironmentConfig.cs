@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using HostconfigManager.Models;
+using HostconfigManager.Core.Models;
 
 namespace HostconfigManager.Core.Services
 {
