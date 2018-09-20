@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using HostconfigManager.Models;
 
-namespace HostconfigManager.Services
+namespace HostconfigManager.Core.Services
 {
     public class EnvironmentConfig : IEnvironmentConfig
     {

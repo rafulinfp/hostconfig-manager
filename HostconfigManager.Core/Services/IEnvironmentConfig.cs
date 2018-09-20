@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using HostconfigManager.Models;
 
-namespace HostconfigManager.Services
+namespace HostconfigManager.Core.Services
 {
     public interface IEnvironmentConfig
     {
