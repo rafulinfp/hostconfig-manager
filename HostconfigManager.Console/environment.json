@@ -1,0 +1,10 @@
+﻿[
+  {
+    "hostname": "kls-qa",
+    "ipAddress": "10.10.35.54"
+  },
+  {
+    "hostname": "default",
+    "ipAddress": "127.0.0.1"
+  }
+]

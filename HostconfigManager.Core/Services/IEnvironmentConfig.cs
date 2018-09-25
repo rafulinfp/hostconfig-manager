@@ -8,7 +8,7 @@ namespace HostconfigManager.Core.Services
     {
         IEnumerable<Domain> LoadDomain();
         IEnumerable<TargetEnvironment> LoadEnvironment();
-        bool SetEnvironment(string hostname);
+        bool SetEnvironment(string hostname, bool keepDefaults = true);
         string LoadDefault();
         OSPlatform GetOSPlatform();
     }
