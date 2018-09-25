@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using HostconfigManager.Core.Models;
 
 namespace HostconfigManager.Core.Services
@@ -9,5 +10,6 @@ namespace HostconfigManager.Core.Services
         IEnumerable<TargetEnvironment> LoadEnvironment();
         bool SetEnvironment(string hostname);
         string LoadDefault();
+        OSPlatform GetOSPlatform();
     }
 }
